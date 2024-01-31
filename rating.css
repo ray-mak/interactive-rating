@@ -30,9 +30,12 @@ main {
 }
 
 .card-container {
-
+    position: relative;
+    width: 410px;
+    height: 420px;
     display: flex;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 #question-container {
@@ -43,32 +46,33 @@ main {
     background-color: var(--dark-blue);
     padding: 30px;
     border-radius: 15px;
+    position: absolute;
 
 }
 
-#question-container.hide {
-    width: 0;
-    display: none;
-}
 
 #thank-you-container {
-    width: 0;
+    position: absolute;
+    right: -410px;
+    width: 410px;
     height: 420px;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--dark-blue);
     padding: 36px;
     border-radius: 15px;
-    transform: translateX(-410px); 
-    transition: all 1s ease;
+    
 
 }
 
+
 #thank-you-container.show {
     width: 410px;
-    display: flex;
-    transform: translateX(0);
+    height: 420px;
+    right: 0;
+    transition: all .5s;
+
 }
 
 .circle {

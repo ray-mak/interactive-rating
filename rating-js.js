@@ -17,12 +17,8 @@ ratings.forEach(button => {
 
 
 const submit = () => {
-    if (ratingValue === "") {
-        alert("Please select a rating!");
-        return;
-    }
+    
     tyContainer.classList.add("show");
-    questionContainer.classList.add("hide");
     summary.innerHTML = `You selected ${ratingValue} out of 5`
     
 }
